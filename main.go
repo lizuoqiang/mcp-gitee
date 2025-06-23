@@ -92,6 +92,7 @@ func addTools(s *server.MCPServer) {
 	addTool(s, repository.ListReleasesTool, repository.ListReleasesHandleFunc)
 	addTool(s, repository.SearchReposTool, repository.SearchOpenSourceReposHandler)
 	addTool(s, repository.ForkRepositoryTool, repository.ForkRepositoryHandler)
+	addTool(s, repository.CreateBranchTool, repository.CreateBranchHandler)
 
 	// Pulls Tools
 	addTool(s, pulls.NewListPullsTool(pulls.ListRepoPullsToolName), pulls.ListPullsHandleFunc(pulls.ListRepoPullsToolName))
