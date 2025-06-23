@@ -1,5 +1,5 @@
 {
-  "name": "@gitee/mcp-gitee",
+  "name": "@github/mcp-gitee",
   "version": "0.1.11",
   "description": "Model Context Protocol (MCP) server for Gitee",
   "main": "./bin/index.js",
