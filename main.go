@@ -9,12 +9,12 @@ import (
 	"os"
 	"strings"
 
-	"gitee.com/oschina/mcp-gitee/operations/issues"
-	"gitee.com/oschina/mcp-gitee/operations/notifications"
-	"gitee.com/oschina/mcp-gitee/operations/pulls"
-	"gitee.com/oschina/mcp-gitee/operations/repository"
-	"gitee.com/oschina/mcp-gitee/operations/users"
-	"gitee.com/oschina/mcp-gitee/utils"
+	"github.com/lizuoqiang/mcp-gitee/operations/issues"
+	"github.com/lizuoqiang/mcp-gitee/operations/notifications"
+	"github.com/lizuoqiang/mcp-gitee/operations/pulls"
+	"github.com/lizuoqiang/mcp-gitee/operations/repository"
+	"github.com/lizuoqiang/mcp-gitee/operations/users"
+	"github.com/lizuoqiang/mcp-gitee/utils"
 	"github.com/mark3labs/mcp-go/mcp"
 
 	"github.com/mark3labs/mcp-go/server"

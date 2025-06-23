@@ -34,7 +34,7 @@ Gitee MCP Server is a Model Context Protocol (MCP) server implementation for Git
 
 1. Clone the repository:
    ```bash
-   git clone https://gitee.com/oschina/mcp-gitee.git
+   git clone https://github.com/lizuoqiang/mcp-gitee.git
    cd mcp-gitee
    ```
 
@@ -46,7 +46,7 @@ Gitee MCP Server is a Model Context Protocol (MCP) server implementation for Git
 
 ### Use go install
    ```bash
-   go install gitee.com/oschina/mcp-gitee@latest
+   go install github.com/lizuoqiang/mcp-gitee@latest
    ```
 
 ## Usage

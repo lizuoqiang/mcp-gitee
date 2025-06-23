@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"gitee.com/oschina/mcp-gitee/operations/types"
-	"gitee.com/oschina/mcp-gitee/utils"
+	"github.com/lizuoqiang/mcp-gitee/operations/types"
+	"github.com/lizuoqiang/mcp-gitee/utils"
 	"github.com/mark3labs/mcp-go/mcp"
 )
 

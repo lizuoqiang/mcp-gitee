@@ -1,4 +1,4 @@
-module gitee.com/oschina/mcp-gitee
+module github.com/lizuoqiang/mcp-gitee
 
 go 1.23.0
 

@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitee.com/oschina/mcp-gitee.git"
+    "url": "git+https://github.com/lizuoqiang/mcp-gitee.git"
   },
   "keywords": [
     "mcp",
@@ -32,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://gitee.com/oschina/mcp-gitee/issues"
+    "url": "https://github.com/lizuoqiang/mcp-gitee/issues"
   },
-  "homepage": "https://gitee.com/oschina/mcp-gitee#readme",
+  "homepage": "https://github.com/lizuoqiang/mcp-gitee#readme",
   "publishConfig": {
     "access": "public"
   }

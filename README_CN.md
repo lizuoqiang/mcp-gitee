@@ -34,7 +34,7 @@ Gitee MCP 服务器是一个用于 Gitee 的模型上下文协议（Model Contex
 
 1. 克隆仓库：
    ```bash
-   git clone https://gitee.com/oschina/mcp-gitee.git
+   git clone https://github.com/lizuoqiang/mcp-gitee.git
    cd mcp-gitee
    ```
 
@@ -46,7 +46,7 @@ Gitee MCP 服务器是一个用于 Gitee 的模型上下文协议（Model Contex
    
 ### 使用 go install 安装
    ```bash
-   go install gitee.com/oschina/mcp-gitee@latest
+   go install github.com/lizuoqiang/mcp-gitee@latest
    ```
 
 ## 使用方法

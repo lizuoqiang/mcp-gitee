@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"gitee.com/oschina/mcp-gitee/utils"
+	"github.com/lizuoqiang/mcp-gitee/utils"
 	"github.com/mark3labs/mcp-go/mcp"
 )
 
