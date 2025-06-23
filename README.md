@@ -79,3 +79,25 @@ Check mcp-gitee version:
 ```bash
 mcp-gitee --version
 ```
+
+## MCP Configuration
+
+### executable
+```
+{
+  "mcpServers": {
+    "gitee": {
+      "command": "mcp-gitee",
+      "env": {
+        "GITEE_API_BASE": "https://gitee.com/api/v5",
+        "GITEE_ACCESS_TOKEN": "<your personal access token>"
+      }
+    }
+  }
+}
+```
+
+### apply access token
+```
+https://gitee.com/profile/personal_access_tokens
+```
