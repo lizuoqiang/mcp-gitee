@@ -49,6 +49,6 @@ func CreateBranchHandler(ctx context.Context, request mcp.CallToolRequest) (*mcp
 	apiUrl := fmt.Sprintf("/repos/%s/%s/branches", owner, repo)
 	giteeClient := utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx), utils.WithPayload(request.Params.Arguments))
 
-	data := &types.Project{}
+	data := &types.BranchItem{}
 	return giteeClient.HandleMCPResult(data)
 }

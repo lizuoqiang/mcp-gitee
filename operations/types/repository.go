@@ -49,3 +49,9 @@ type SearchProject struct {
 	CreatedAt   string   `json:"created_at"`
 	UpdatedAt   string   `json:"updated_at"`
 }
+
+type BranchItem struct {
+	Name          string `json:"name"`
+	Protected     bool   `json:"protected"`
+	ProtectionUrl string `json:"protection_url"`
+}
