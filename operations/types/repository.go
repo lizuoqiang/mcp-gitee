@@ -55,3 +55,9 @@ type BranchItem struct {
 	Protected     bool   `json:"protected"`
 	ProtectionUrl string `json:"protection_url"`
 }
+
+type TagItem struct {
+	Name    string `json:"name"`
+	Message string `json:"message"`
+	Commit  string `json:"commit"`
+}

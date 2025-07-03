@@ -32,10 +32,12 @@ var MergePullTool = func() mcp.Tool {
 			mcp.WithBoolean(
 				"prune_source_branch",
 				mcp.Description("Whether to delete the source branch after merging"),
+				mcp.DefaultBool(false),
 			),
 			mcp.WithBoolean(
 				"close_related_issue",
 				mcp.Description("Whether to close the related issue after merging"),
+				mcp.DefaultBool(false),
 			),
 			mcp.WithString(
 				"title",
