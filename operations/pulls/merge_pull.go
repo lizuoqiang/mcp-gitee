@@ -68,7 +68,24 @@ func MergePullHandleFunc(ctx context.Context, request mcp.CallToolRequest) (*mcp
 		return mcp.NewToolResultError(err.Error()), err
 	}
 
-	apiUrl := fmt.Sprintf("/repos/%s/%s/pulls/%d/merge", owner, repo, number)
-	giteeClient := utils.NewGiteeClient("PUT", apiUrl, utils.WithContext(ctx), utils.WithPayload(args))
+	//处理审查
+	apiUrl := fmt.Sprintf("/repos/%s/%s/pulls/%d/review", owner, repo, number)
+	giteeClient := utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx))
+	result, err := giteeClient.HandleMCPResult(nil)
+	if err != nil {
+		return result, err
+	}
+
+	//处理测试
+	apiUrl = fmt.Sprintf("/repos/%s/%s/pulls/%d/test", owner, repo, number)
+	giteeClient = utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx))
+	result, err = giteeClient.HandleMCPResult(nil)
+	if err != nil {
+		return result, err
+	}
+
+	//最终合并
+	apiUrl = fmt.Sprintf("/repos/%s/%s/pulls/%d/merge", owner, repo, number)
+	giteeClient = utils.NewGiteeClient("PUT", apiUrl, utils.WithContext(ctx), utils.WithPayload(args))
 	return giteeClient.HandleMCPResult(nil)
 }

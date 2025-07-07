@@ -26,6 +26,8 @@ alwaysApply: true
 - 查询我的仓库：使用 list_user_repos，支持按 affiliation、type、visibility 等筛选。
 - 查看仓库文件：选中仓库后，使用 get_file_content 查看 README 或其他文件。
 - 在仓库下创建 Issue/Pull Request：结合 create_issue 或 create_pull 工具。
+- 创建tag：使用 create_tag。
+- 创建分支：使用 create_branch。
 
 ### 3.2 工作项流转
 

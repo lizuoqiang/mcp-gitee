@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/lizuoqiang/mcp-gitee/operations/types"
 	"github.com/lizuoqiang/mcp-gitee/utils"
 	"github.com/mark3labs/mcp-go/mcp"
 )
@@ -54,6 +53,5 @@ func CreateTagHandler(ctx context.Context, request mcp.CallToolRequest) (*mcp.Ca
 	apiUrl := fmt.Sprintf("/repos/%s/%s/tags", owner, repo)
 	giteeClient := utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx), utils.WithPayload(request.Params.Arguments))
 
-	data := &types.TagItem{}
-	return giteeClient.HandleMCPResult(data)
+	return giteeClient.HandleMCPResult(nil)
 }
