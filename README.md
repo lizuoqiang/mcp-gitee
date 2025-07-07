@@ -69,7 +69,7 @@ The server provides various tools for interacting with Gitee:
 
 ### Use go install
    ```bash
-   go install gitee.com/oschina/mcp-gitee@latest
+   go install github.com/lizuoqiang/mcp-gitee@latest
    ```
 
 ## Usage
