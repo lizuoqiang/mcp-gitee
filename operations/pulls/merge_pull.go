@@ -68,9 +68,13 @@ func MergePullHandleFunc(ctx context.Context, request mcp.CallToolRequest) (*mcp
 		return mcp.NewToolResultError(err.Error()), err
 	}
 
+	testPrArgs := map[string]interface{}{
+		"force": true,
+	}
+
 	//处理审查
 	apiUrl := fmt.Sprintf("/repos/%s/%s/pulls/%d/review", owner, repo, number)
-	giteeClient := utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx))
+	giteeClient := utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx), utils.WithPayload(testPrArgs))
 	result, err := giteeClient.HandleMCPResult(nil)
 	if err != nil {
 		return result, err
@@ -78,7 +82,7 @@ func MergePullHandleFunc(ctx context.Context, request mcp.CallToolRequest) (*mcp
 
 	//处理测试
 	apiUrl = fmt.Sprintf("/repos/%s/%s/pulls/%d/test", owner, repo, number)
-	giteeClient = utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx))
+	giteeClient = utils.NewGiteeClient("POST", apiUrl, utils.WithContext(ctx), utils.WithPayload(testPrArgs))
 	result, err = giteeClient.HandleMCPResult(nil)
 	if err != nil {
 		return result, err
